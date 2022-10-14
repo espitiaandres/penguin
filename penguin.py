@@ -29,6 +29,7 @@ def penguin(
     `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`, 
     each kwarg would determine if that specific log is shown
     `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
+    `show_return`: When `True`, it shows the function's return value(s).
     """
 
     def penguin_decorator(func: Callable):
