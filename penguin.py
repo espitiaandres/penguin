@@ -40,16 +40,6 @@ def penguin(
             value = func(*args, **kwargs)
             end_time = time.perf_counter()
             run_time = end_time - start_time
-
-            # if run_time < 0.0001:
-            #     time_msg = f"{(run_time * 1_000_000):.4f} \u03BCs (microseconds)"
-            # elif run_time < 1:
-            #     time_msg = f"{(run_time * 1000):.4f} ms (miliseconds)"
-            # elif run_time < 60:
-            #     time_msg = f"{run_time:.4f} s (seconds)"
-            # else:
-            #     run_time_mins = run_time / 60
-            #     time_msg = f"{run_time_mins:.4f} min (minutes)"
             time_msg = get_time_msg(run_time)
 
             logger.info(f"Finished {func_name} in {time_msg}.")
