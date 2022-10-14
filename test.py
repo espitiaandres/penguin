@@ -1,12 +1,12 @@
 from penguin import penguin
 
 
-@penguin(verbose=True)
-def test_func():
-    for i in range(1000000000):
+@penguin(show_return=True)
+def test_func(test1, test2=None):
+    for i in range(10000):
         pass
     return "test"
 
 
 if __name__ == "__main__":
-    test = test_func()
+    test = test_func("", test2=":")
