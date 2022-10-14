@@ -24,6 +24,11 @@ def penguin(
     ## Penguin: a customizable stopwatch decorator
 
     Penguin is lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
+
+    kwargs:
+    `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`, 
+    each kwarg would determine if that specific log is shown
+    `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
     """
 
     def penguin_decorator(func: Callable):
@@ -41,7 +46,6 @@ def penguin(
             end_time = time.perf_counter()
             run_time = end_time - start_time
             time_msg = get_time_msg(run_time)
-
             logger.info(f"Finished {func_name} in {time_msg}.")
 
             if show_return or verbose:
