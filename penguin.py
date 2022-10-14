@@ -1,26 +1,30 @@
 import logging
 from functools import wraps
 import time
-from typing import Callable, Any
+from typing import Callable, Any, Optional
+
+from log_args import log_args
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger(__name__)
 
 """
 TODO:
+-
 """
 
 
 def penguin(
-  verbose: bool = False,
-  show_args: bool = False,
-  show_return: bool = False,
+    verbose: Optional[bool] = False,
+    show_args: Optional[bool] = False,
+    show_return: Optional[bool] = False,
 ) -> Callable:
     """
     ## Penguin: a customizable stopwatch decorator
 
     Penguin is lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
     """
+
     def penguin_decorator(func: Callable):
         """Log the runtime of the decorated function"""
 
@@ -29,10 +33,7 @@ def penguin(
             func_name = func.__name__
 
             if show_args or verbose:
-                args_list = [repr(arg) for arg in args]
-                kwargs_list = [f"{k}={v!r}" for k, v, in kwargs.items()]
-                params_list = ", ".join([*args_list, *kwargs_list])
-                logger.info(f"Running {func_name}({params_list})")
+                log_args(args, kwargs, func_name)
 
             start_time = time.perf_counter()
             value = func(*args, **kwargs)
