@@ -4,33 +4,32 @@ import time
 from typing import Callable, Any
 
 logging.basicConfig(level=logging.NOTSET)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(f"__name__ stopwatch")
 
 """
 TODO:
-- docstrings
-- rename functions better
-- kwarg for when wanting show output
 """
 
 
 def penguin(verbose: bool = False) -> Callable:
     """
-    ## This is a docstring
+    ## Penguin: a customizable stopwatch decorator
 
-    with markdon
+    Penguin is lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
     """
+
     def penguin_decorator(func: Callable) -> Any:
         """Log the runtime of the decorated function"""
+
         @wraps(func)
         def penguin_wrapper(*args, **kwargs):
             func_name = func.__name__
 
             if verbose:
-              args_list = [repr(arg) for arg in args]
-              kwargs_list = [f"{k}={v}" for k, v, in kwargs.items()]
-              params_list = ", ".join([*args_list, *kwargs_list])
-              logger.info(f"Running {func_name}({params_list})")
+                args_list = [repr(arg) for arg in args]
+                kwargs_list = [f"{k}={v}" for k, v, in kwargs.items()]
+                params_list = ", ".join([*args_list, *kwargs_list])
+                logger.info(f"Running {func_name}({params_list})")
 
             start_time = time.perf_counter()
             value = func(*args, **kwargs)
@@ -38,7 +37,7 @@ def penguin(verbose: bool = False) -> Callable:
             run_time = end_time - start_time
 
             if run_time < 0.0001:
-                time_msg = f"{(run_time * 1000):.4f} \u03BCs (microseconds)"
+                time_msg = f"{(run_time * 1_000_000):.4f} \u03BCs (microseconds)"
             elif run_time < 1:
                 time_msg = f"{(run_time * 1000):.4f} ms (miliseconds)"
             elif run_time < 60:
@@ -50,7 +49,7 @@ def penguin(verbose: bool = False) -> Callable:
             logger.info(f"Finished {func_name} in {time_msg}.")
 
             if verbose:
-              logger.info(f"Returned value: {value!r}")
+                logger.info(f"Returned value: {value!r}")
 
             return value
 
