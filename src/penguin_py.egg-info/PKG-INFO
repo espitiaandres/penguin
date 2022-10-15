@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: penguin-py
-Version: 0.0.10
+Version: 0.1.0
 Summary: Penguin: a customizable stopwatch decorator
 Home-page: https://github.com/espitiaandres/penguin
 Author: espitiaandres
@@ -20,21 +20,39 @@ Penguin: a customizable stopwatch decorator
 
 https://github.com/espitiaandres/penguin
 
-More details to follow :)
+More details to follow soon! :)
 
 To install:
 
 `pip install penguin_py`
 
-To run:
+To run with default kwargs:
 
 ```
-from src.penguin_py.penguin import penguin
-<!-- from penguin_py.penguin import penguin -->
+from penguin_py import penguin
 
 
-@penguin(verbose=True)
+@penguin()
 def test_func(test1, test2=None):
+    # NOTE: this function can be anything!
+    for i in range(10000):
+        pass
+    return "test", True
+
+
+test = test_func("", test2=":")
+```
+
+To run with user specified kwargs:
+
+```
+@penguin(
+    verbose=True,
+    show_args=True,
+    show_return=True,
+)
+def test_func(test1, test2=None):
+    # NOTE: this function can be anything!
     for i in range(10000):
         pass
     return "test", True

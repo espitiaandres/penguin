@@ -20,7 +20,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="penguin_py",
-    version="0.0.10",
+    version="0.1.0",
     description="Penguin: a customizable stopwatch decorator",
     author="espitiaandres",
     url="https://github.com/espitiaandres/penguin",
@@ -32,6 +32,7 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
+        "Topic :: Utilities",
     ],
     python_requires=">=3.7",
     py_modules=["penguin_py"],
@@ -40,4 +41,10 @@ setup(
         # Import requirements here
         "pre-commit",
     ],
+    download_url="https://github.com/espitiaandres/penguin",
+    project_urls={
+        "Documentation": '"https://github.com/espitiaandres/penguin"',
+        "Source": '"https://github.com/espitiaandres/penguin"',
+        "Tracker": '"https://github.com/espitiaandres/penguin"/issues',
+    },
 )
