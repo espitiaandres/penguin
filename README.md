@@ -13,7 +13,7 @@ To install:
 To run:
 
 ```
-from src.penguin_py.penguin import penguin
+from penguin_py import penguin
 <!-- from penguin_py.penguin import penguin -->
 
 

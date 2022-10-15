@@ -15,7 +15,6 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- change imports -> from penguin_py import penguin
 - Update README.md
 """
 
