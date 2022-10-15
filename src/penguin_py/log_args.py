@@ -12,4 +12,3 @@ def log_args(args: Tuple[Any, ...], kwargs: dict, func_name: str):
     return
 
 
-
