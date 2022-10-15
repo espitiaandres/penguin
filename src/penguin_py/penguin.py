@@ -3,13 +3,12 @@
 __version__ = "0.1"
 
 
-
 import logging
-from functools import wraps
 import time
+from functools import wraps
 from typing import Callable, Optional
-from . import get_time_msg
-from . import log_args
+
+from . import get_time_msg, log_args
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")
@@ -34,7 +33,7 @@ def penguin(
     Penguin is lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
 
     kwargs:
-    `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`, 
+    `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
     each kwarg would determine if that specific log is shown
     `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
     `show_return`: When `True`, it shows the function's return value(s).

@@ -1,5 +1,5 @@
 import logging
-from typing import Tuple, Any
+from typing import Any, Tuple
 
 logger = logging.getLogger("penguin")
 
@@ -10,3 +10,6 @@ def log_args(args: Tuple[Any, ...], kwargs: dict, func_name: str):
     params_list = ", ".join([*args_list, *kwargs_list])
     logger.info(f"Running {func_name}({params_list})")
     return
+
+
+
