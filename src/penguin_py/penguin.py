@@ -17,7 +17,6 @@ logger = logging.getLogger("penguin")
 TODO:
 - change imports -> from penguin_py import penguin
 - Update README.md
-- set up precommit hooks with isort, black,
 - clean up code
 """
 
