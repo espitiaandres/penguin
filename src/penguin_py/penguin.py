@@ -27,7 +27,7 @@ def penguin(
     verbose: Optional[bool] = False,
     show_args: Optional[bool] = False,
     show_return: Optional[bool] = False,
-) -> Callable:
+):
     """
     ## Penguin: a customizable stopwatch decorator
 
