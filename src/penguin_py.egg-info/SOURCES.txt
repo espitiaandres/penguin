@@ -3,13 +3,9 @@ README.md
 pyproject.toml
 setup.cfg
 setup.py
-src/penguin_py/__init__.py
-src/penguin_py/get_time_msg.py
-src/penguin_py/log_args.py
-src/penguin_py/log_return.py
-src/penguin_py/penguin.py
-src/penguin_py/test.py
+src/penguin_py.py
 src/penguin_py.egg-info/PKG-INFO
 src/penguin_py.egg-info/SOURCES.txt
 src/penguin_py.egg-info/dependency_links.txt
+src/penguin_py.egg-info/requires.txt
 src/penguin_py.egg-info/top_level.txt

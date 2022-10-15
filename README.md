@@ -1,4 +1,4 @@
-# Penguin
+# Penguin_py
 
 Penguin: a customizable stopwatch decorator
 

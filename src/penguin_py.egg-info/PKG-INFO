@@ -1,13 +1,13 @@
 Metadata-Version: 2.1
 Name: penguin-py
-Version: 0.0.1
+Version: 0.0.5
 Summary: Penguin: a customizable stopwatch decorator
 Home-page: https://github.com/espitiaandres/penguin
 Author: espitiaandres
 Author-email: espitiaandres123@gmail.com
 License: UNKNOWN
 Project-URL: Bug Tracker, https://github.com/espitiaandres/penguin/issues
-Description: # Penguin
+Description: # Penguin_py
 
         Penguin: a customizable stopwatch decorator
 
