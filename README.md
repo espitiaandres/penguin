@@ -4,7 +4,7 @@ Penguin: a customizable stopwatch decorator
 
 https://github.com/espitiaandres/penguin
 
-More details to follow :)
+More details to follow soon! :)
 
 To install:
 

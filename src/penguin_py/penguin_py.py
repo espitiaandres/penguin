@@ -67,8 +67,6 @@ def penguin(
             time_msg = get_time_msg.get_time_msg(run_time)
             logger.info(f"Finished {func_name} in {time_msg}.")
 
-            logger.info("adventure of a lifetime!")
-
             if show_return or verbose:
                 logger.info(f"Returned value: {value!r}")
 
