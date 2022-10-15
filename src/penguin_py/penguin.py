@@ -18,6 +18,8 @@ logger = logging.getLogger(__name__)
 TODO:
 - change imports -> from penguin_py import penguin
 - Update README.md
+- set up precommit hooks with isort, black,
+- clean up code
 """
 
 
