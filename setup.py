@@ -25,5 +25,6 @@ setup(
     package_dir={'':'src'},
     install_requires = [
       # Import requirements here
+      "pre-commit",
     ]
 )

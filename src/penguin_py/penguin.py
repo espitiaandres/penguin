@@ -12,7 +12,7 @@ from . import get_time_msg
 from . import log_args
 
 logging.basicConfig(level=logging.NOTSET)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("penguin")
 
 """
 TODO:
