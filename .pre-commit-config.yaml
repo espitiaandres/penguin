@@ -8,6 +8,8 @@ repos:
       - id: trailing-whitespace
       - id: debug-statements
       - id: check-added-large-files
+      - id: check-toml
+      - id: check-ast
   - repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:
