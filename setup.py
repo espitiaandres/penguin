@@ -43,8 +43,8 @@ setup(
     ],
     download_url="https://github.com/espitiaandres/penguin",
     project_urls={
-        "Documentation": '"https://github.com/espitiaandres/penguin"',
-        "Source": '"https://github.com/espitiaandres/penguin"',
-        "Tracker": '"https://github.com/espitiaandres/penguin/issues"',
+        "Documentation": "https://github.com/espitiaandres/penguin",
+        "Source": "https://github.com/espitiaandres/penguin",
+        "Tracker": "https://github.com/espitiaandres/penguin/issues",
     },
 )

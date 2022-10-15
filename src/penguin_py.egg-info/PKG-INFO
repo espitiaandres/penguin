@@ -8,7 +8,7 @@ Author: espitiaandres
 Author-email: espitiaandres123@gmail.com
 Project-URL: Documentation, "https://github.com/espitiaandres/penguin"
 Project-URL: Source, "https://github.com/espitiaandres/penguin"
-Project-URL: Tracker, "https://github.com/espitiaandres/penguin"/issues
+Project-URL: Tracker, "https://github.com/espitiaandres/penguin/issues"
 Keywords: penguin python,penguin_py,stopwatch,timer,penguin_py timer
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
