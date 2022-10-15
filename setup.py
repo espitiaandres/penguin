@@ -1,8 +1,9 @@
 import setuptools
 from setuptools import setup
 
+# import src.penguin_py.penguin_py
 # from src.penguin_py import penguin
-# # # <!-- from penguin_py.penguin import penguin -->
+# from src.penguin_py.penguin_py import penguin
 
 
 # @penguin(verbose=True)
@@ -19,7 +20,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="penguin_py",
-    version="0.0.8",
+    version="0.0.9",
     description="Penguin: a customizable stopwatch decorator",
     author="espitiaandres",
     url="https://github.com/espitiaandres/penguin",
