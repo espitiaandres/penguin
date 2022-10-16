@@ -1,6 +1,6 @@
-# Penguin_py
+# 🐧 Penguin_py 🐧
 
-Penguin: a customizable stopwatch decorator
+Penguin: a customizable stopwatch decorator ⏱
 
 <img
   src="/img/penguin_py_logo.jpg"
@@ -8,13 +8,25 @@ Penguin: a customizable stopwatch decorator
   title="Peter the penguin, penguin_py's mascot."
   style="display: inline-block; margin: 0 auto; max-width: 200px">
 
+Meet Peter, `penguin_py's` beloved mascot!
+
 https://github.com/espitiaandres/penguin
 
-More details to follow soon! :)
+# Installation
 
-To install:
+## With Command Line
 
-`pip install penguin_py`
+To install `penguin_py` with the command line, run this command:
+
+`pip install penguin_py`.
+
+## With a `requirements.txt` file
+
+To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
+
+`penguin-py==0.1.1`
+
+# Usage
 
 To run with default kwargs:
 
@@ -50,3 +62,9 @@ def test_func(test1, test2=None):
 
 test = test_func("", test2=":")
 ```
+
+# Documentation
+
+# Bugs/Requests
+
+# License
