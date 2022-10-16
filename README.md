@@ -2,6 +2,12 @@
 
 Penguin: a customizable stopwatch decorator
 
+<img
+  src="/img/penguin_py_logo.jpg"
+  alt="Peter the penguin, penguin_py's mascot."
+  title="Peter the penguin, penguin_py's mascot."
+  style="display: inline-block; margin: 0 auto; max-width: 200px">
+
 https://github.com/espitiaandres/penguin
 
 More details to follow soon! :)
