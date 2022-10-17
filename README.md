@@ -6,7 +6,7 @@ Penguin: a customizable stopwatch decorator ⏱
   src="/img/penguin_py_logo.jpg"
   alt="Peter the penguin, penguin_py's mascot."
   title="Peter the penguin, penguin_py's mascot."
-  style="display: inline-block; margin: 0 auto; max-width: 200px">
+   width="200"/>
 
 Meet Peter, `penguin_py's` beloved mascot!
 
