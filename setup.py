@@ -1,20 +1,6 @@
 import setuptools
 from setuptools import setup
 
-# import src.penguin_py.penguin_py
-# from src.penguin_py import penguin
-# from src.penguin_py.penguin_py import penguin
-
-
-# @penguin(verbose=True)
-# def test_func(test1, test2=None):
-#     for i in range(10000):
-#         pass
-#     return "test", True
-
-
-# test_func("")
-
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
