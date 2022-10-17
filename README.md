@@ -11,7 +11,9 @@ Penguin: a customizable stopwatch decorator ⏱
 
 Meet Peter, `penguin_py's` beloved mascot!
 
-https://github.com/espitiaandres/penguin
+# Source code:
+
+The source code of this package lives here: https://github.com/espitiaandres/penguin
 
 # Installation
 
@@ -29,7 +31,7 @@ To install `penguin_py` using a `requirements.txt` file, add this line to your `
 
 # Usage
 
-To run with default kwargs:
+✅ To run with **default kwargs**:
 
 ```
 from penguin_py import penguin
@@ -38,7 +40,7 @@ from penguin_py import penguin
 @penguin()
 def test_func(test1, test2=None):
     # NOTE: this function can be anything!
-    for i in range(10000):
+    for i in range(10000000):
         pass
     return "test", True
 
@@ -46,17 +48,21 @@ def test_func(test1, test2=None):
 test = test_func("", test2=":")
 ```
 
-To run with user specified kwargs:
+This will output the following to your logger:
+
+![Sample penguin output](/img/sample_output.png)
+
+✅ To run with **user specified kwargs**:
 
 ```
 @penguin(
-    verbose=True,
-    show_args=True,
+    verbose=False,
+    show_args=False,
     show_return=True,
 )
 def test_func(test1, test2=None):
     # NOTE: this function can be anything!
-    for i in range(10000):
+    for i in range(10000000):
         pass
     return "test", True
 
@@ -64,8 +70,45 @@ def test_func(test1, test2=None):
 test = test_func("", test2=":")
 ```
 
+This will output the following to your logger:
+
+![Sample penguin output kwargs](/img/sample_output_kwargs.png)
+
+❌ Since `penguin` is a decorator that takes in kwargs, do **not** call it like this (without the brackets `()`):
+
+```from penguin_py import penguin
+
+
+@penguin
+def test_func(test1, test2=None):
+    # NOTE: this function can be anything!
+    for i in range(10000000):
+        pass
+    return "test", True
+
+
+test = test_func("", test2=":")
+```
+
+You'll get a `TypeError` relating to arguments.
+
+## List of kwargs:
+
+**Note:** by default, all kwargs are set to `False`.
+
+- `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
+  each kwarg would determine if that specific log is shown
+- `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
+- `show_return`: When `True`, it shows the function's return value(s).
+
 # Documentation
+
+Documentation of `penguin_py` can be found here: https://github.com/espitiaandres/penguin/blob/master/README.md
 
 # Bugs/Requests
 
+If you find any bugs or have any suggestions to `penguin_py`, submit them in the issues tab in the Github repo. This can be found here: https://github.com/espitiaandres/penguin/issues
+
 # License
+
+Distributed under the terms of the MIT license, `penguin_py` is free and open source software.
