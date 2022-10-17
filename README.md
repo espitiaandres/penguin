@@ -56,8 +56,8 @@ This will output the following to your logger:
 
 ```
 @penguin(
-    verbose=False,
-    show_args=False,
+    verbose=True,
+    show_args=True,
     show_return=True,
 )
 def test_func(test1, test2=None):
@@ -74,7 +74,7 @@ This will output the following to your logger:
 
 ![Sample penguin output kwargs](/img/sample_output_kwargs.png)
 
-❌ Since `penguin` is a decorator that takes in kwargs, do **not** call it like this (without the brackets `()`):
+❌ Since `penguin` is a decorator that takes in kwargs, do **not** call it without the brackets `()`.
 
 ```from penguin_py import penguin
 
@@ -97,7 +97,7 @@ You'll get a `TypeError` relating to arguments.
 **Note:** by default, all kwargs are set to `False`.
 
 - `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
-  each kwarg would determine if that specific log is shown
+  each kwarg would determine if that specific log is shown.
 - `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
 - `show_return`: When `True`, it shows the function's return value(s).
 
