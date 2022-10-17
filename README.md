@@ -1,6 +1,6 @@
 # 🐧 Penguin_py 🐧
 
-Penguin: a customizable stopwatch decorator ⏱
+Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run.
 
 <img
     src="/img/penguin_py_logo.jpg"
@@ -11,7 +11,7 @@ Penguin: a customizable stopwatch decorator ⏱
 
 Meet Peter, `penguin_py's` beloved mascot!
 
-# Source code:
+# Source code
 
 The source code of this package lives here: https://github.com/espitiaandres/penguin
 
@@ -92,7 +92,7 @@ test = test_func("", test2=":")
 
 You'll get a `TypeError` relating to arguments.
 
-## List of kwargs:
+## List of kwargs
 
 **Note:** by default, all kwargs are set to `False`.
 

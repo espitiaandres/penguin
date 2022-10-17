@@ -42,7 +42,7 @@ def penguin(
     """
     ## Penguin: a customizable stopwatch decorator
 
-    Penguin is lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
+    Penguin is a lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
 
     kwargs:
     `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
