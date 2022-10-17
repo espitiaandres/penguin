@@ -15,8 +15,7 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- Update README.md
-- Update github repo description, other things
+-
 """
 
 """
