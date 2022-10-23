@@ -10,6 +10,11 @@ Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you de
 />
 
 Meet Peter, `penguin_py's` beloved mascot!
+<!--
+Link: https://www.freepik.com/free-vector/cute-happy-penguin-cartoon-icon-illustration-animal-nature-icon-concept-isolated-flat-cartoon-style_10717963.htm#query=penguin%20logo&position=1&from_view=keyword
+
+Credits go to catalystuff on freepik.com
+ -->
 
 # Source code
 

@@ -13,11 +13,6 @@ from .get_logger_colour import get_logger_colour
 from .get_time_msg import get_time_msg
 from .log_args import log_args
 
-# from penguin_py import get_logger_colour
-
-# from penguin_py.colour_foreground import ColourForeground
-
-
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")
 
@@ -50,7 +45,7 @@ def penguin(
     show_return: Optional[bool] = False,
     foreground_colour: Optional[
         Literal["red" "yellow", "green", "blue", "magenta", "cyan"]
-    ] = False,
+    ] = "",
 ):
     """
     ## Penguin: a customizable stopwatch decorator
@@ -70,11 +65,11 @@ def penguin(
         @wraps(func)
         def penguin_wrapper(*args, **kwargs):
             func_name = func.__name__
-            colour_msg = get_logger_colour(foreground_colour)
+            foreground_colour_msg = get_logger_colour(foreground_colour)
             grey_colour = colour_map["grey"]
 
             if show_args or verbose:
-                log_args(args, kwargs, func_name, colour_msg)
+                log_args(args, kwargs, func_name, foreground_colour_msg)
 
             start_time = time.perf_counter()
             value = func(*args, **kwargs)
@@ -82,10 +77,12 @@ def penguin(
             run_time = end_time - start_time
             time_msg = get_time_msg(run_time)
 
-            logger.info(f"Finished {colour_msg}{func_name}{grey_colour} in {time_msg}")
+            logger.info(
+                f"Finished {foreground_colour_msg}{func_name}{grey_colour} in {time_msg}"
+            )
 
             if show_return or verbose:
-                logger.info(f"Returned value: {colour_msg}{value!r}")
+                logger.info(f"Returned value: {foreground_colour_msg}{value!r}")
 
             return value
 
