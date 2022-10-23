@@ -16,11 +16,30 @@ Link: https://www.freepik.com/free-vector/cute-happy-penguin-cartoon-icon-illust
 Credits go to catalystuff on freepik.com
  -->
 
+ # Getting Started 🚀
+
+##  Table of contents:
+ - [Source Code](#source_code)
+ - [Installation](#installation)
+    - [With Command Line](#installation_with_cli)
+    - [With a `requirements.txt` file](#installation_req_txt)
+ - [Usage](#usage)
+    - [List of kwargs](#kwargs_list)
+ - [Documentation](#documentation)
+ - [Bugs/Requests](#bugs_requests)
+ - [License](#license)
+
+<a name="source_code"/>
+
 # Source code
 
 The source code of this package lives here: https://github.com/espitiaandres/penguin
 
+<a name="installation"/>
+
 # Installation
+
+<a name="installation_with_cli"/>
 
 ## With Command Line
 
@@ -28,11 +47,15 @@ To install `penguin_py` with the command line, run this command:
 
 `pip install penguin_py`.
 
+<a name="installation_req_txt"/>
+
 ## With a `requirements.txt` file
 
 To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
 `penguin-py==0.1.1`
+
+<a name="Usage"/>
 
 # Usage
 
@@ -116,13 +139,19 @@ each kwarg would determine if that specific log is shown
 - `background`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
     - default: `"black"`
 
+<a name="documentation"/>
+
 # Documentation
 
 Documentation of `penguin_py` can be found here: https://github.com/espitiaandres/penguin/blob/master/README.md
 
+<a name="bugs_requests"/>
+
 # Bugs/Requests
 
 If you find any bugs or have any suggestions to `penguin_py`, submit them in the issues tab in the Github repo. This can be found here: https://github.com/espitiaandres/penguin/issues
+
+<a name="license"/>
 
 # License
 
