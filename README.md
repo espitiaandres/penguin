@@ -101,6 +101,7 @@ test = test_func("", test2=":")
 You'll get a `TypeError` relating to arguments.
 
 <a name="kwargs_list"/>
+
 ## List of kwargs
 
 - `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
