@@ -8,14 +8,18 @@ import time
 from functools import wraps
 from typing import Callable, Optional
 
-from . import get_time_msg, log_args
+from .get_time_msg import get_time_msg
+from .log_args import log_args
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")
 
 """
 TODO:
--
+- Add colours to logged times (make it easier for visibility)
+https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
+- Give user ability to log to a log file.
+- Fix imports for get_time_msg, log_args
 """
 
 """
@@ -58,13 +62,13 @@ def penguin(
             func_name = func.__name__
 
             if show_args or verbose:
-                log_args.log_args(args, kwargs, func_name)
+                log_args(args, kwargs, func_name)
 
             start_time = time.perf_counter()
             value = func(*args, **kwargs)
             end_time = time.perf_counter()
             run_time = end_time - start_time
-            time_msg = get_time_msg.get_time_msg(run_time)
+            time_msg = get_time_msg(run_time)
             logger.info(f"Finished {func_name} in {time_msg}.")
 
             if show_return or verbose:
