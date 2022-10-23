@@ -20,6 +20,7 @@ logger = logging.getLogger("penguin")
 """
 TODO:
 - Give user ability to log to a log file.
+- Make a different README.md for PyPII (to format better)
 """
 
 """
