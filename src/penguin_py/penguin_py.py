@@ -6,20 +6,27 @@ __version__ = "0.1"
 import logging
 import time
 from functools import wraps
-from typing import Callable, Optional
+from typing import Callable, Literal, Optional
 
+from .colour_map import colour_map
+from .get_logger_colour import get_logger_colour
 from .get_time_msg import get_time_msg
 from .log_args import log_args
 
+# from penguin_py import get_logger_colour
+
+# from penguin_py.colour_foreground import ColourForeground
+
+
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")
+
 
 """
 TODO:
 - Add colours to logged times (make it easier for visibility)
 https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 - Give user ability to log to a log file.
-- Fix imports for get_time_msg, log_args
 """
 
 """
@@ -41,6 +48,9 @@ def penguin(
     verbose: Optional[bool] = False,
     show_args: Optional[bool] = False,
     show_return: Optional[bool] = False,
+    foreground_colour: Optional[
+        Literal["red" "yellow", "green", "blue", "magenta", "cyan"]
+    ] = False,
 ):
     """
     ## Penguin: a customizable stopwatch decorator
@@ -60,19 +70,22 @@ def penguin(
         @wraps(func)
         def penguin_wrapper(*args, **kwargs):
             func_name = func.__name__
+            colour_msg = get_logger_colour(foreground_colour)
+            grey_colour = colour_map["grey"]
 
             if show_args or verbose:
-                log_args(args, kwargs, func_name)
+                log_args(args, kwargs, func_name, colour_msg)
 
             start_time = time.perf_counter()
             value = func(*args, **kwargs)
             end_time = time.perf_counter()
             run_time = end_time - start_time
             time_msg = get_time_msg(run_time)
-            logger.info(f"Finished {func_name} in {time_msg}.")
+
+            logger.info(f"Finished {colour_msg}{func_name}{grey_colour} in {time_msg}")
 
             if show_return or verbose:
-                logger.info(f"Returned value: {value!r}")
+                logger.info(f"Returned value: {colour_msg}{value!r}")
 
             return value
 
