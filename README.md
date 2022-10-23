@@ -64,9 +64,10 @@ This will output the following to your logger:
     verbose=True,
     show_args=True,
     show_return=True,
+    foreground='cyan',
+    background='yellow',
 )
 def test_func(test1, test2=None):
-    # NOTE: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
@@ -78,6 +79,8 @@ test = test_func("", test2=":")
 This will output the following to your logger:
 
 ![Sample penguin output kwargs](/img/sample_output_kwargs.png)
+
+**Note**: For a more detailed list of all kwargs and their defaults, visit this section: [List of kwargs](#kwargs_list)
 
 ❌ Since `penguin` is a decorator that takes in kwargs, do **not** call it without the brackets `()`.
 
@@ -97,6 +100,7 @@ test = test_func("", test2=":")
 
 You'll get a `TypeError` relating to arguments.
 
+<a name="kwargs_list"/>
 ## List of kwargs
 
 - `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
