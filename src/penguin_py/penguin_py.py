@@ -78,7 +78,6 @@ def penguin(
             func_name = func.__name__
             foreground_colour = get_logger_colour(foreground, "foreground_colours")
             background_colour = get_logger_colour(background, "background_colours")
-            # grey_colour = colour_map["foreground_colours"]["grey"]
             grey_foreground_colour, black_background_colour = get_default_colours()
 
             if show_args or verbose:
