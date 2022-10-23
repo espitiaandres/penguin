@@ -1,4 +1,4 @@
-from typing import Callable, Literal, Optional
+from typing import Literal
 
 from .colour_map import colour_map
 
