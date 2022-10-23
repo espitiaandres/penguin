@@ -1,18 +1,25 @@
 import logging
 from typing import Any, Tuple
 
-from .colour_map import colour_map
+from .get_default_colours import get_default_colours
 
 logger = logging.getLogger("penguin")
 
 
 def log_args(
-    args: Tuple[Any, ...], kwargs: dict, func_name: str, foreground_colour_msg: str
+    args: Tuple[Any, ...],
+    kwargs: dict,
+    func_name: str,
+    foreground_colour: str,
+    background_colour: str,
 ):
-    grey_colour = colour_map["grey"]
+    grey_foreground_colour, black_background_colour = get_default_colours()
     args_list = [repr(arg) for arg in args]
     kwargs_list = [f"{k}={v!r}" for k, v, in kwargs.items()]
     params_list = ", ".join([*args_list, *kwargs_list])
     function_signature = f"{func_name}({params_list})"
-    logger.info(f"Running {foreground_colour_msg}{function_signature}{grey_colour}")
+
+    format_start = f"{foreground_colour}{background_colour}"
+    format_end = f"{grey_foreground_colour}{black_background_colour}"
+    logger.info(f"Running {format_start}{function_signature}{format_end}")
     return

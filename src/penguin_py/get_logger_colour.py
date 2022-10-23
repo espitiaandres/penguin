@@ -1,10 +1,18 @@
+from typing import Callable, Literal, Optional
+
 from .colour_map import colour_map
 
 
-def get_logger_colour(colour: str):
-    all_possible_colours = list(colour_map.keys())
+def get_logger_colour(
+    colour: str, colour_type: Literal["background_colours", "foreground_colours"]
+):
+    all_possible_colours = list(colour_map[colour_type].keys())
 
     if colour not in all_possible_colours:
-        return colour_map["grey"]
+        colour_dict = colour_map[colour_type]
+        if colour_type == "foreground_colours":
+            return colour_dict["grey"]
+        else:
+            return colour_dict["black"]
 
-    return colour_map[colour]
+    return colour_map[colour_type][colour]

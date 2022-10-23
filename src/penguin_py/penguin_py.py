@@ -9,6 +9,7 @@ from functools import wraps
 from typing import Callable, Literal, Optional
 
 from .colour_map import colour_map
+from .get_default_colours import get_default_colours
 from .get_logger_colour import get_logger_colour
 from .get_time_msg import get_time_msg
 from .log_args import log_args
@@ -43,8 +44,13 @@ def penguin(
     verbose: Optional[bool] = False,
     show_args: Optional[bool] = False,
     show_return: Optional[bool] = False,
-    foreground_colour: Optional[
-        Literal["red" "yellow", "green", "blue", "magenta", "cyan"]
+    foreground: Optional[
+        Literal["red" "yellow", "green", "blue", "magenta", "cyan", "grey"]
+    ] = "",
+    background: Optional[
+        Literal[
+            "red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"
+        ]
     ] = "",
 ):
     """
@@ -57,6 +63,8 @@ def penguin(
     each kwarg would determine if that specific log is shown
     `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
     `show_return`: When `True`, it shows the function's return value(s).
+    `foreground`: .
+    `background`: .
     """
 
     def penguin_decorator(func: Callable):
@@ -65,11 +73,13 @@ def penguin(
         @wraps(func)
         def penguin_wrapper(*args, **kwargs):
             func_name = func.__name__
-            foreground_colour_msg = get_logger_colour(foreground_colour)
-            grey_colour = colour_map["grey"]
+            foreground_colour = get_logger_colour(foreground, "foreground_colours")
+            background_colour = get_logger_colour(background, "background_colours")
+            # grey_colour = colour_map["foreground_colours"]["grey"]
+            grey_foreground_colour, black_background_colour = get_default_colours()
 
             if show_args or verbose:
-                log_args(args, kwargs, func_name, foreground_colour_msg)
+                log_args(args, kwargs, func_name, foreground_colour, background_colour)
 
             start_time = time.perf_counter()
             value = func(*args, **kwargs)
@@ -77,12 +87,14 @@ def penguin(
             run_time = end_time - start_time
             time_msg = get_time_msg(run_time)
 
+            format_start = f"{foreground_colour}{background_colour}"
+            format_end = f"{grey_foreground_colour}{black_background_colour}"
             logger.info(
-                f"Finished {foreground_colour_msg}{func_name}{grey_colour} in {time_msg}"
+                f"Finished {format_start}{func_name}{format_end} in {format_start}{time_msg}{format_end}"
             )
 
             if show_return or verbose:
-                logger.info(f"Returned value: {foreground_colour_msg}{value!r}")
+                logger.info(f"Returned value: {format_start}{value!r}{format_end}")
 
             return value
 

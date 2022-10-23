@@ -1,18 +1,4 @@
-from enum import Enum
-
-# class ColourForeground(Enum):
-#   HEADER = '\033[95m'
-#   OKBLUE = '\033[94m'
-#   OKCYAN = '\033[96m'
-#   OKGREEN = '\033[92m'
-#   WARNING = '\033[93m'
-#   FAIL = '\033[91m'
-#   ENDC = '\033[0m'
-#   BOLD = '\033[1m'
-#   UNDERLINE = '\033[4m'
-
-#  ANSI Colour maps
-colour_map = {
+foreground_colours = {
     "red": "\033[91m",
     "yellow": "\033[93m",
     "green": "\033[92m",
@@ -20,4 +6,21 @@ colour_map = {
     "magenta": "\033[95m",
     "cyan": "\033[96m",
     "grey": "\033[37m",
+}
+
+background_colours = {
+    "red": "\033[41m",
+    "yellow": "\033[43m",
+    "green": "\033[42m",
+    "blue": "\033[44m",
+    "magenta": "\033[45m",
+    "cyan": "\033[46m",
+    "grey": "\033[37m",
+    "black": "\033[40m",
+    "white": "\033[107m",
+}
+
+colour_map = {
+    "foreground_colours": foreground_colours,
+    "background_colours": background_colours,
 }
