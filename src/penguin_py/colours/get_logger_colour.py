@@ -10,6 +10,7 @@ def get_logger_colour(
 
     if colour not in all_possible_colours:
         colour_dict = colour_map[colour_type]
+
         if colour_type == "foreground_colours":
             return colour_dict["grey"]
         else:

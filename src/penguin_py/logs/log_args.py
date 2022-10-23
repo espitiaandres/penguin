@@ -1,7 +1,7 @@
 import logging
 from typing import Any, Tuple
 
-from .colours.get_default_colours import get_default_colours
+from ..colours.get_default_colours import get_default_colours
 
 logger = logging.getLogger("penguin")
 

@@ -11,7 +11,7 @@ from typing import Callable, Literal, Optional
 from .colours.get_default_colours import get_default_colours
 from .colours.get_logger_colour import get_logger_colour
 from .get_time_msg import get_time_msg
-from .log_args import log_args
+from .logs.log_args import log_args
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")
