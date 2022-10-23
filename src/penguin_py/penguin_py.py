@@ -19,7 +19,6 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 - Give user ability to log to a log file.
 """
 
