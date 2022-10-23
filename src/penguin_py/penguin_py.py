@@ -44,12 +44,12 @@ def penguin(
     show_return: Optional[bool] = False,
     foreground: Optional[
         Literal["red" "yellow", "green", "blue", "magenta", "cyan", "grey"]
-    ] = "",
+    ] = "grey",
     background: Optional[
         Literal[
             "red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"
         ]
-    ] = "",
+    ] = "black",
 ):
     """
     ## Penguin: a customizable stopwatch decorator
@@ -59,10 +59,15 @@ def penguin(
     kwargs:
     `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
     each kwarg would determine if that specific log is shown
+        - default: `False`
     `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
+        - default: `False`
     `show_return`: When `True`, it shows the function's return value(s).
-    `foreground`: .
-    `background`: .
+        - default: `False`
+    `foreground`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey"]`, it colour the logger output **text** the chosen colour.
+        - default: `"grey"`
+    `background`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
+        - default: `"black"`
     """
 
     def penguin_decorator(func: Callable):
