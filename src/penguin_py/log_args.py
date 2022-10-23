@@ -1,7 +1,7 @@
 import logging
 from typing import Any, Tuple
 
-from .get_default_colours import get_default_colours
+from .colours.get_default_colours import get_default_colours
 
 logger = logging.getLogger("penguin")
 
@@ -18,7 +18,6 @@ def log_args(
     kwargs_list = [f"{k}={v!r}" for k, v, in kwargs.items()]
     params_list = ", ".join([*args_list, *kwargs_list])
     function_signature = f"{func_name}({params_list})"
-
     format_start = f"{foreground_colour}{background_colour}"
     format_end = f"{grey_foreground_colour}{black_background_colour}"
     logger.info(f"Running {format_start}{function_signature}{format_end}")

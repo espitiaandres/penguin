@@ -8,9 +8,8 @@ import time
 from functools import wraps
 from typing import Callable, Literal, Optional
 
-from .colour_map import colour_map
-from .get_default_colours import get_default_colours
-from .get_logger_colour import get_logger_colour
+from .colours.get_default_colours import get_default_colours
+from .colours.get_logger_colour import get_logger_colour
 from .get_time_msg import get_time_msg
 from .log_args import log_args
 
@@ -20,7 +19,6 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- Add colours to logged times (make it easier for visibility)
 https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output
 - Give user ability to log to a log file.
 """
