@@ -1,7 +1,7 @@
 from typing import Any, Literal, Optional
 
-from ..colours.get_logger_colour import get_logger_colour
-from ..logs.log_args import log_args
+from .colours.get_logger_colour import get_logger_colour
+from .logs.log_args import log_args
 
 
 def penguin_wrapped_pre_timer(

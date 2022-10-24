@@ -9,8 +9,8 @@ from functools import wraps
 from typing import Callable, Literal, Optional
 
 from .get_time_msg import get_time_msg
-from .processing.post import penguin_wrapped_post_timer
-from .processing.pre import penguin_wrapped_pre_timer
+from .post import penguin_wrapped_post_timer
+from .pre import penguin_wrapped_pre_timer
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")

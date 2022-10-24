@@ -1,1 +1,1 @@
-from .penguin_py import penguin
+from .penguin_py import penguin, penguin_async
