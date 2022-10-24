@@ -19,6 +19,7 @@ logger = logging.getLogger("penguin")
 """
 TODO:
 - Give user ability to log to a log file.
+- Move pre.py and post.py to a `processing` folder
 """
 
 """
