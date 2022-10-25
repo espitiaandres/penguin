@@ -8,7 +8,6 @@ import time
 from functools import wraps
 from typing import Callable, Literal, Optional
 
-from .logs.log_errors import log_errors
 from .processing.get_time_msg import get_time_msg
 from .processing.post import penguin_wrapped_post_timer
 from .processing.pre import penguin_wrapped_pre_timer
@@ -90,10 +89,7 @@ def penguin(
             try:
                 start_time = time.perf_counter()
                 value = func(*args, **kwargs)
-            except Exception as e:
-                log_errors(e)
-                value = None
-            finally:
+
                 end_time = time.perf_counter()
                 run_time = end_time - start_time
                 time_msg = get_time_msg(run_time)
@@ -108,6 +104,8 @@ def penguin(
                     show_return=show_return,
                 )
                 return value
+            except Exception as e:
+                raise Exception(e)
 
         return penguin_wrapped
 
@@ -164,10 +162,7 @@ def penguin_async(
             try:
                 start_time = time.perf_counter()
                 value = await func(*args, **kwargs)
-            except Exception as e:
-                log_errors(e)
-                value = None
-            finally:
+
                 end_time = time.perf_counter()
                 run_time = end_time - start_time
                 time_msg = get_time_msg(run_time)
@@ -182,6 +177,8 @@ def penguin_async(
                     show_return=show_return,
                 )
                 return value
+            except Exception as e:
+                raise Exception(e)
 
         return penguin_wrapped
 
