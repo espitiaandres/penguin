@@ -4,6 +4,9 @@ logger = logging.getLogger("penguin")
 
 
 def get_time_msg(run_time: float):
+    """
+    Calculate execution time and prints into readable time string.
+    """
     if run_time < 0.0001:
         time_msg = f"{(run_time * 1_000_000):.4f} \u03BCs (microseconds)"
     elif run_time < 1:

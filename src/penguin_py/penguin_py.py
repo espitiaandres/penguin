@@ -8,9 +8,10 @@ import time
 from functools import wraps
 from typing import Callable, Literal, Optional
 
-from .get_time_msg import get_time_msg
-from .post import penguin_wrapped_post_timer
-from .pre import penguin_wrapped_pre_timer
+from .logs.log_errors import log_errors
+from .processing.get_time_msg import get_time_msg
+from .processing.post import penguin_wrapped_post_timer
+from .processing.pre import penguin_wrapped_pre_timer
 
 logging.basicConfig(level=logging.NOTSET)
 logger = logging.getLogger("penguin")
@@ -20,6 +21,8 @@ logger = logging.getLogger("penguin")
 TODO:
 - Give user ability to log to a log file.
 - Move pre.py and post.py to a `processing` folder
+- Update README.md and README_PYPI.md to show async decorator
+- Logging for error handling
 """
 
 """
@@ -83,22 +86,28 @@ def penguin(
                 foreground=foreground,
                 background=background,
             )
-            start_time = time.perf_counter()
-            value = func(*args, **kwargs)
-            end_time = time.perf_counter()
-            run_time = end_time - start_time
-            time_msg = get_time_msg(run_time)
-            penguin_wrapped_post_timer(
-                foreground_colour,
-                background_colour,
-                func_name,
-                time_msg,
-                value,
-                verbose=verbose,
-                show_return=show_return,
-            )
 
-            return value
+            try:
+                start_time = time.perf_counter()
+                value = func(*args, **kwargs)
+            except Exception as e:
+                log_errors(e)
+                value = None
+            finally:
+                end_time = time.perf_counter()
+                run_time = end_time - start_time
+                time_msg = get_time_msg(run_time)
+
+                penguin_wrapped_post_timer(
+                    foreground_colour,
+                    background_colour,
+                    func_name,
+                    time_msg,
+                    value,
+                    verbose=verbose,
+                    show_return=show_return,
+                )
+                return value
 
         return penguin_wrapped
 
@@ -151,22 +160,28 @@ def penguin_async(
                 foreground=foreground,
                 background=background,
             )
-            start_time = time.perf_counter()
-            value = await func(*args, **kwargs)
-            end_time = time.perf_counter()
-            run_time = end_time - start_time
-            time_msg = get_time_msg(run_time)
-            penguin_wrapped_post_timer(
-                foreground_colour,
-                background_colour,
-                func_name,
-                time_msg,
-                value,
-                verbose=verbose,
-                show_return=show_return,
-            )
 
-            return value
+            try:
+                start_time = time.perf_counter()
+                value = await func(*args, **kwargs)
+            except Exception as e:
+                log_errors(e)
+                value = None
+            finally:
+                end_time = time.perf_counter()
+                run_time = end_time - start_time
+                time_msg = get_time_msg(run_time)
+
+                penguin_wrapped_post_timer(
+                    foreground_colour,
+                    background_colour,
+                    func_name,
+                    time_msg,
+                    value,
+                    verbose=verbose,
+                    show_return=show_return,
+                )
+                return value
 
         return penguin_wrapped
 

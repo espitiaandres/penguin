@@ -13,6 +13,9 @@ def log_args(
     foreground_colour: str,
     background_colour: str,
 ):
+    """
+    Logs the args and kwargs that a function was called with.
+    """
     grey_foreground_colour, black_background_colour = get_default_colours()
     args_list = [repr(arg) for arg in args]
     kwargs_list = [f"{k}={v!r}" for k, v, in kwargs.items()]
