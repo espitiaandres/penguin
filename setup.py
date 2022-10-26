@@ -6,7 +6,7 @@ with open("README_PYPI.md", "r") as fh:
 
 setup(
     name="penguin_py",
-    version="0.3.1",
+    version="0.3.2",
     description="Penguin: a customizable stopwatch decorator",
     author="espitiaandres",
     url="https://github.com/espitiaandres/penguin",
@@ -26,7 +26,7 @@ setup(
     install_requires=[
         # Import requirements here
         "pre-commit",
-        "colorama",
+        "colorama==0.4.6",
     ],
     download_url="https://github.com/espitiaandres/penguin",
     project_urls={

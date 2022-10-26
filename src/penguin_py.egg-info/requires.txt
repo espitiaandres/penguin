@@ -1,2 +1,2 @@
 pre-commit
-colorama
+colorama==0.4.6
