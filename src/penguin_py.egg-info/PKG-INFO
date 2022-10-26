@@ -3,13 +3,15 @@ Name: penguin-py
 Version: 0.2.10
 Summary: Penguin: a customizable stopwatch decorator
 Home-page: https://github.com/espitiaandres/penguin
-Download-URL: https://github.com/espitiaandres/penguin
 Author: espitiaandres
 Author-email: espitiaandres123@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/espitiaandres/penguin
 Project-URL: Documentation, https://github.com/espitiaandres/penguin
 Project-URL: Source, https://github.com/espitiaandres/penguin
 Project-URL: Tracker, https://github.com/espitiaandres/penguin/issues
 Keywords: penguin python,penguin_py,stopwatch,timer,penguin_py timer
+Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent

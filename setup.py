@@ -26,6 +26,7 @@ setup(
     install_requires=[
         # Import requirements here
         "pre-commit",
+        "colorama",
     ],
     download_url="https://github.com/espitiaandres/penguin",
     project_urls={

@@ -3,6 +3,8 @@ import time
 from functools import wraps
 from typing import Callable, Literal, Optional
 
+from colorama import just_fix_windows_console
+
 from .processing.get_time_msg import get_time_msg
 from .processing.post import penguin_wrapped_post_timer
 from .processing.pre import penguin_wrapped_pre_timer
@@ -16,6 +18,7 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
+- Windows colours
 - Update README.md and README_PYPI.md to show async decorator
 """
 
@@ -32,6 +35,8 @@ python3 setup.py sdist bdist_wheel
 - Re-upload the new files:
 twine upload dist/*
 """
+
+just_fix_windows_console()
 
 
 def penguin(
