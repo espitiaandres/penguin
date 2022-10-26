@@ -1,8 +1,3 @@
-"""An amazing sample package!"""
-
-__version__ = "0.1"
-
-
 import logging
 import time
 from functools import wraps
@@ -12,16 +7,16 @@ from .processing.get_time_msg import get_time_msg
 from .processing.post import penguin_wrapped_post_timer
 from .processing.pre import penguin_wrapped_pre_timer
 
-logging.basicConfig(level=logging.NOTSET)
+logging.basicConfig(
+    level=logging.NOTSET,
+    format="%(asctime)s | %(name)s - %(levelname)s - %(message)s",
+)
 logger = logging.getLogger("penguin")
 
 
 """
 TODO:
-- Give user ability to log to a log file.
-- Move pre.py and post.py to a `processing` folder
 - Update README.md and README_PYPI.md to show async decorator
-- Logging for error handling
 """
 
 """
