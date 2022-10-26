@@ -3,3 +3,4 @@
 /dist
 playground.py
 **/__pycache__/
+.python-version

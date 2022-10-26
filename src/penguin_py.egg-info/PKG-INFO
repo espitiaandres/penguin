@@ -1,17 +1,15 @@
 Metadata-Version: 2.1
 Name: penguin-py
-Version: 0.2.10
+Version: 0.3.1
 Summary: Penguin: a customizable stopwatch decorator
 Home-page: https://github.com/espitiaandres/penguin
+Download-URL: https://github.com/espitiaandres/penguin
 Author: espitiaandres
 Author-email: espitiaandres123@gmail.com
-License: UNKNOWN
-Download-URL: https://github.com/espitiaandres/penguin
 Project-URL: Documentation, https://github.com/espitiaandres/penguin
 Project-URL: Source, https://github.com/espitiaandres/penguin
 Project-URL: Tracker, https://github.com/espitiaandres/penguin/issues
 Keywords: penguin python,penguin_py,stopwatch,timer,penguin_py timer
-Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
@@ -40,7 +38,7 @@ To install `penguin_py` with the command line, run this command:
 
 To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.2.10`
+`penguin-py==0.3.1`
 
 # Usage
 
