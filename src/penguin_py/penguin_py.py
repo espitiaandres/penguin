@@ -6,8 +6,7 @@ from typing import Callable, Literal, Optional
 from colorama import just_fix_windows_console
 
 from .processing.get_time_msg import get_time_msg
-from .processing.post import penguin_wrapped_post_timer
-from .processing.pre import penguin_wrapped_pre_timer
+from .processing.processing import DataProcessing
 
 logging.basicConfig(
     level=logging.NOTSET,
@@ -76,7 +75,7 @@ def penguin(
 
         @wraps(func)
         def penguin_wrapped(*args, **kwargs):
-            foreground_colour, background_colour, func_name = penguin_wrapped_pre_timer(
+            data_processing = DataProcessing(
                 func,
                 args,
                 kwargs,
@@ -85,6 +84,7 @@ def penguin(
                 foreground=foreground,
                 background=background,
             )
+            data_processing.pre()
 
             try:
                 start_time = time.perf_counter()
@@ -94,10 +94,7 @@ def penguin(
                 run_time = end_time - start_time
                 time_msg = get_time_msg(run_time)
 
-                penguin_wrapped_post_timer(
-                    foreground_colour,
-                    background_colour,
-                    func_name,
+                data_processing.post(
                     time_msg,
                     value,
                     verbose=verbose,
@@ -149,7 +146,7 @@ def penguin_async(
 
         @wraps(func)
         async def penguin_wrapped(*args, **kwargs):
-            foreground_colour, background_colour, func_name = penguin_wrapped_pre_timer(
+            data_processing = DataProcessing(
                 func,
                 args,
                 kwargs,
@@ -158,6 +155,7 @@ def penguin_async(
                 foreground=foreground,
                 background=background,
             )
+            data_processing.pre()
 
             try:
                 start_time = time.perf_counter()
@@ -167,10 +165,7 @@ def penguin_async(
                 run_time = end_time - start_time
                 time_msg = get_time_msg(run_time)
 
-                penguin_wrapped_post_timer(
-                    foreground_colour,
-                    background_colour,
-                    func_name,
+                data_processing.post(
                     time_msg,
                     value,
                     verbose=verbose,
