@@ -61,7 +61,7 @@ To install `penguin_py` using a `requirements.txt` file, add this line to your `
 
 ✅ To run with **default kwargs**:
 
-```
+```python
 from penguin_py import penguin
 
 
@@ -82,7 +82,7 @@ This will output the following to your logger:
 
 ✅ To run with **user specified kwargs**:
 
-```
+```python
 @penguin(
     verbose=True,
     show_args=True,
@@ -107,7 +107,8 @@ This will output the following to your logger:
 
 ❌ Since `penguin` is a decorator that takes in kwargs, do **not** call it without the brackets `()`.
 
-```from penguin_py import penguin
+```python
+from penguin_py import penguin
 
 
 @penguin

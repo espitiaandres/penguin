@@ -24,7 +24,7 @@ To install `penguin_py` using a `requirements.txt` file, add this line to your `
 
 ✅ To run with **default kwargs**:
 
-```
+```python
 from penguin_py import penguin
 
 
@@ -41,7 +41,7 @@ test = test_func("", test2=":")
 
 ✅ To run with **user specified kwargs**:
 
-```
+```python
 @penguin(
     verbose=True,
     show_args=True,
@@ -62,7 +62,8 @@ test = test_func("", test2=":")
 
 ❌ Since `penguin` is a decorator that takes in kwargs, do **not** call it without the brackets `()`.
 
-```from penguin_py import penguin
+```python
+from penguin_py import penguin
 
 
 @penguin
