@@ -17,7 +17,6 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- Windows colours
 - Update README.md and README_PYPI.md to show async decorator
 """
 

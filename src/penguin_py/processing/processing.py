@@ -9,6 +9,11 @@ logger = logging.getLogger("penguin")
 
 
 class DataProcessing:
+    """
+    A DataProcessing object handles the pre-processing and post-processing of the function.
+    This entails the getting colours, logs, and formatting the logging output.
+    """
+
     def __init__(
         self,
         func: Any,
@@ -83,12 +88,7 @@ class DataProcessing:
             f"Finished {format_start}{self.func_name}{format_end} in {format_start}{time_msg}{format_end}"
         )
 
-        if value:
-            if show_return or verbose:
-                logger.info(f"Returned value: {format_start}{value!r}{format_end}")
-        else:
-            logger.info(
-                f"{format_start}An error occurred{format_end}. No return value was obtained."
-            )
+        if show_return or verbose:
+            logger.info(f"Returned value: {format_start}{value!r}{format_end}")
 
         return
