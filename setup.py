@@ -6,7 +6,7 @@ with open("README_PYPI.md", "r") as fh:
 
 setup(
     name="penguin_py",
-    version="0.3.2",
+    version="0.3.3",
     description="Penguin: a customizable stopwatch decorator",
     author="espitiaandres",
     url="https://github.com/espitiaandres/penguin",

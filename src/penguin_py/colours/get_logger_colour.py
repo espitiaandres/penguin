@@ -11,12 +11,12 @@ def get_logger_colour(
     """
     all_possible_colours = list(colour_map[colour_type].keys())
 
-    if colour not in all_possible_colours:
-        colour_dict = colour_map[colour_type]
+    if colour in all_possible_colours:
+        return colour_map[colour_type][colour]
 
-        if colour_type == "foreground_colours":
-            return colour_dict["grey"]
-        else:
-            return colour_dict["black"]
+    colour_dict = colour_map[colour_type]
 
-    return colour_map[colour_type][colour]
+    if colour_type == "foreground_colours":
+        return colour_dict["grey"]
+    else:
+        return colour_dict["black"]
