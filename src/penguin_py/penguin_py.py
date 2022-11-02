@@ -55,7 +55,7 @@ def penguin(
     ] = "black",
 ):
     """
-    ## A customziable stopwatch decorator for synchronous functions
+    ## A customizable stopwatch decorator for synchronous functions
 
     Penguin is a lightweight, customizable decorator that helps you determine how long it takes for your functions to run.
 

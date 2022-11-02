@@ -1,13 +1,15 @@
 # 🐧 Penguin_py 🐧
 
-Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run.
+Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous and asynchronous functions.
 
+<p align="center">
 <img
     src="/img/penguin_py_logo.jpg"
     alt="Peter the penguin, penguin_py's mascot."
     title="Peter the penguin, penguin_py's mascot."
     width="200"
 />
+</p>
 
 Meet Peter, `penguin_py's` beloved mascot!
 <!--
@@ -24,6 +26,8 @@ Credits go to catalystuff on freepik.com
     - [With Command Line](#installation_with_cli)
     - [With a `requirements.txt` file](#installation_req_txt)
  - [Usage](#usage)
+    - [Synchronous Functions](#synchronous_functions)
+    - [Asynchronous Functions](#asynchronous_functions)
     - [List of kwargs](#kwargs_list)
  - [Documentation](#documentation)
  - [Bugs/Requests](#bugs_requests)
@@ -59,6 +63,12 @@ To install `penguin_py` using a `requirements.txt` file, add this line to your `
 
 # Usage
 
+<a name="synchronous_functions"/>
+
+## Synchronous Functions
+
+For **synchronous** functions, use the `@penguin()` decorator.
+
 ✅ To run with **default kwargs**:
 
 ```python
@@ -66,14 +76,14 @@ from penguin_py import penguin
 
 
 @penguin()
-def test_func(test1, test2=None):
+def foo(test1, test2=None):
     # NOTE: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
 
 
-test = test_func("", test2=":")
+test = foo("", test2="")
 ```
 
 This will output the following to your logger:
@@ -90,13 +100,13 @@ This will output the following to your logger:
     foreground='cyan',
     background='yellow',
 )
-def test_func(test1, test2=None):
+def foo(test1, test2=None):
     for i in range(10000000):
         pass
     return "test", True
 
 
-test = test_func("", test2=":")
+test = foo("", test2="")
 ```
 
 This will output the following to your logger:
@@ -112,17 +122,67 @@ from penguin_py import penguin
 
 
 @penguin
-def test_func(test1, test2=None):
+def foo(test1, test2=None):
     # NOTE: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
 
 
-test = test_func("", test2=":")
+test = foo("", test2=":")
 ```
 
 You'll get a `TypeError` relating to arguments.
+
+<a name="synchronous_functions"/>
+
+## Asynchronous Functions
+
+For **asynchronous** functions, use the `@penguin_async()` decorator.
+
+✅ To run with **default kwargs**:
+
+```python
+from penguin_py import penguin
+
+
+@penguin_async()
+def foo(test1, test2=None):
+    # NOTE: this function can be anything!
+    for i in range(10000000):
+        pass
+    return "test", True
+
+
+test = foo("", test2="")
+```
+
+This will output the following to your logger:
+
+![Sample penguin output](/img/sample_output.png)
+
+✅ To run with **user specified kwargs**:
+
+```python
+@penguin(
+    verbose=True,
+    show_args=True,
+    show_return=True,
+    foreground='cyan',
+    background='yellow',
+)
+def foo(test1, test2=None):
+    for i in range(10000000):
+        pass
+    return "test", True
+
+
+test = foo("", test2="")
+```
+
+This will output the following to your logger:
+
+![Sample penguin output kwargs](/img/sample_output_kwargs.png)
 
 <a name="kwargs_list"/>
 

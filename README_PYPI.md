@@ -1,6 +1,6 @@
 # 🐧 Penguin_py 🐧
 
-Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run.
+Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous and asynchronous functions.
 
 # Source code
 
@@ -22,6 +22,10 @@ To install `penguin_py` using a `requirements.txt` file, add this line to your `
 
 # Usage
 
+## Synchronous Functions
+
+For **synchronous** functions, use the `@penguin()` decorator.
+
 ✅ To run with **default kwargs**:
 
 ```python
@@ -29,14 +33,14 @@ from penguin_py import penguin
 
 
 @penguin()
-def test_func(test1, test2=None):
+def foo(test1, test2=None):
     # NOTE: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
 
 
-test = test_func("", test2=":")
+test = foo("", test2="")
 ```
 
 ✅ To run with **user specified kwargs**:
@@ -49,13 +53,13 @@ test = test_func("", test2=":")
     foreground='cyan',
     background='yellow',
 )
-def test_func(test1, test2=None):
+def foo(test1, test2=None):
     for i in range(10000000):
         pass
     return "test", True
 
 
-test = test_func("", test2=":")
+test = foo("", test2="")
 ```
 
 **Note**: For a more detailed list of all kwargs and their defaults, visit this section: [List of kwargs](#kwargs_list)
@@ -67,7 +71,7 @@ from penguin_py import penguin
 
 
 @penguin
-def test_func(test1, test2=None):
+def foo(test1, test2=None):
     # NOTE: this function can be anything!
     for i in range(10000000):
         pass
@@ -78,6 +82,56 @@ test = test_func("", test2=":")
 ```
 
 You'll get a `TypeError` relating to arguments.
+
+## Asynchronous Functions
+
+For **asynchronous** functions, use the `@penguin_async()` decorator.
+
+✅ To run with **default kwargs**:
+
+```python
+from penguin_py import penguin
+
+
+@penguin_async()
+def foo(test1, test2=None):
+    # NOTE: this function can be anything!
+    for i in range(10000000):
+        pass
+    return "test", True
+
+
+test = foo("", test2="")
+```
+
+This will output the following to your logger:
+
+![Sample penguin output](/img/sample_output.png)
+
+✅ To run with **user specified kwargs**:
+
+```python
+@penguin(
+    verbose=True,
+    show_args=True,
+    show_return=True,
+    foreground='cyan',
+    background='yellow',
+)
+def foo(test1, test2=None):
+    for i in range(10000000):
+        pass
+    return "test", True
+
+
+test = foo("", test2="")
+```
+
+This will output the following to your logger:
+
+![Sample penguin output kwargs](/img/sample_output_kwargs.png)
+
+<a name="kwargs_list"/>
 
 ## List of kwargs
 
