@@ -1,5 +1,6 @@
 import logging
 import time
+import traceback
 from functools import wraps
 from typing import Callable, Literal, Optional
 
@@ -104,8 +105,8 @@ def penguin(
                     show_return=show_return,
                 )
                 return value
-            except Exception as e:
-                raise Exception(e)
+            except Exception:
+                raise Exception(traceback.format_exc())
 
         return penguin_wrapped
 
@@ -175,8 +176,8 @@ def penguin_async(
                     show_return=show_return,
                 )
                 return value
-            except Exception as e:
-                raise Exception(e)
+            except Exception:
+                raise Exception(traceback.format_exc())
 
         return penguin_wrapped
 

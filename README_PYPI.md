@@ -18,7 +18,7 @@ To install `penguin_py` with the command line, run this command:
 
 To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.3.2`
+`penguin-py==0.3.5`
 
 # Usage
 
@@ -136,16 +136,15 @@ This will output the following to your logger:
 ## List of kwargs
 
 - `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
-each kwarg would determine if that specific log is shown
-    - default: `False`
+  each kwarg would determine if that specific log is shown - default: `False`
 - `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
-    - default: `False`
+  - default: `False`
 - `show_return`: When `True`, it shows the function's return value(s).
-    - default: `False`
+  - default: `False`
 - `foreground`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey"]`, it colour the logger output **text** the chosen colour.
-    - default: `"grey"`
+  - default: `"grey"`
 - `background`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
-    - default: `"black"`
+  - default: `"black"`
 
 # Documentation
 

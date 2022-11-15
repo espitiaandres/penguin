@@ -12,26 +12,28 @@ Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you de
 </p>
 
 Meet Peter, `penguin_py's` beloved mascot!
+
 <!--
 Link: https://www.freepik.com/free-vector/cute-happy-penguin-cartoon-icon-illustration-animal-nature-icon-concept-isolated-flat-cartoon-style_10717963.htm#query=penguin%20logo&position=1&from_view=keyword
 
 Credits go to catalystuff on freepik.com
  -->
 
- # Getting Started 🚀
+# Getting Started 🚀
 
-##  Table of contents:
- - [Source Code](#source_code)
- - [Installation](#installation)
-    - [With Command Line](#installation_with_cli)
-    - [With a `requirements.txt` file](#installation_req_txt)
- - [Usage](#usage)
-    - [Synchronous Functions](#synchronous_functions)
-    - [Asynchronous Functions](#asynchronous_functions)
-    - [List of kwargs](#kwargs_list)
- - [Documentation](#documentation)
- - [Bugs/Requests](#bugs_requests)
- - [License](#license)
+## Table of contents:
+
+- [Source Code](#source_code)
+- [Installation](#installation)
+  - [With Command Line](#installation_with_cli)
+  - [With a `requirements.txt` file](#installation_req_txt)
+- [Usage](#usage)
+  - [Synchronous Functions](#synchronous_functions)
+  - [Asynchronous Functions](#asynchronous_functions)
+  - [List of kwargs](#kwargs_list)
+- [Documentation](#documentation)
+- [Bugs/Requests](#bugs_requests)
+- [License](#license)
 
 <a name="source_code"/>
 
@@ -57,7 +59,7 @@ To install `penguin_py` with the command line, run this command:
 
 To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.3.2`
+`penguin-py==0.3.5`
 
 <a name="Usage"/>
 
@@ -189,16 +191,15 @@ This will output the following to your logger:
 ## List of kwargs
 
 - `verbose`: When `True`, it shows all logs that are described by the other kwargs. When `False`,
-each kwarg would determine if that specific log is shown
-    - default: `False`
+  each kwarg would determine if that specific log is shown - default: `False`
 - `show_args`: When `True`, it shows the function's signature, with the `*args` and `**kwargs` being passed in.
-    - default: `False`
+  - default: `False`
 - `show_return`: When `True`, it shows the function's return value(s).
-    - default: `False`
+  - default: `False`
 - `foreground`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey"]`, it colour the logger output **text** the chosen colour.
-    - default: `"grey"`
+  - default: `"grey"`
 - `background`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
-    - default: `"black"`
+  - default: `"black"`
 
 <a name="documentation"/>
 
