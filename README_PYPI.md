@@ -141,9 +141,9 @@ This will output the following to your logger:
   - default: `False`
 - `show_return`: When `True`, it shows the function's return value(s).
   - default: `False`
-- `foreground`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey"]`, it colour the logger output **text** the chosen colour.
+- `foreground`: When chosen from this list, `["red", "yellow", "green", "blue", "magenta", "cyan", "grey"]`, it colour the logger output **text** the chosen colour.
   - default: `"grey"`
-- `background`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
+- `background`: When chosen from this list, `["red", "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
   - default: `"black"`
 
 # Documentation

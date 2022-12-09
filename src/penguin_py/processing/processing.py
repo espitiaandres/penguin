@@ -26,7 +26,8 @@ class DataProcessing:
         ] = "grey",
         background: Optional[
             Literal[
-                "red" "yellow",
+                "red",
+                "yellow",
                 "green",
                 "blue",
                 "magenta",
