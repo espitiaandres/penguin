@@ -18,10 +18,9 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- Update README.md and README_PYPI.md
-    - Show async decorator
-    - If the function throws an error, the logs won't show up
-    - Make more appealing, center the images
+- Boilerplate in each file
+- changelog.txt file
+- reddit post
 
 """
 

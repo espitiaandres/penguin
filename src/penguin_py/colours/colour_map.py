@@ -1,3 +1,7 @@
+# Colours are ANSI escape sequences for the terminal to show them.
+
+
+# Foreground colours are for the **text**
 foreground_colours = {
     "red": "\033[91m",
     "yellow": "\033[93m",
@@ -8,6 +12,7 @@ foreground_colours = {
     "grey": "\033[37m",
 }
 
+# Background colours are for the **text's highlight**
 background_colours = {
     "red": "\033[41m",
     "yellow": "\033[43m",
@@ -21,6 +26,6 @@ background_colours = {
 }
 
 colour_map = {
-    "foreground_colours": foreground_colours,
-    "background_colours": background_colours,
+    "foreground": foreground_colours,
+    "background": background_colours,
 }

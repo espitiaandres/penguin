@@ -53,12 +53,8 @@ class DataProcessing:
         It runs common functions used, and gets the foreground colour, background colour, and the function name to run in the @penguin and @penguin_async decorators.
         """
         self.func_name = self.func.__name__
-        self.foreground_colour = get_logger_colour(
-            self.foreground, "foreground_colours"
-        )
-        self.background_colour = get_logger_colour(
-            self.background, "background_colours"
-        )
+        self.foreground_colour = get_logger_colour(self.foreground, "foreground")
+        self.background_colour = get_logger_colour(self.background, "background")
 
         if self.show_args or self.verbose:
             log_args(

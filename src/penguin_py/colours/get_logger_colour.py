@@ -3,11 +3,12 @@ from typing import Literal
 from .colour_map import colour_map
 
 
-def get_logger_colour(
-    colour: str, colour_type: Literal["background_colours", "foreground_colours"]
-):
+def get_logger_colour(colour: str, colour_type: Literal["background", "foreground"]):
     """
     Gets the logger foreground and background colours using the colour_map dictionary in colour_map.py
+
+    Foreground colours are for the **text**
+    Background colours are for the **text's highlight**
     """
     all_possible_colours = list(colour_map[colour_type].keys())
 
@@ -16,7 +17,7 @@ def get_logger_colour(
 
     colour_dict = colour_map[colour_type]
 
-    if colour_type == "foreground_colours":
+    if colour_type == "foreground":
         return colour_dict["grey"]
     else:
         return colour_dict["black"]
