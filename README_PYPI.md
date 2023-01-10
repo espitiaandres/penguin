@@ -34,7 +34,7 @@ from penguin_py import penguin
 
 @penguin()
 def foo(test1, test2=None):
-    # NOTE: this function can be anything!
+    # Note: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
@@ -72,7 +72,7 @@ from penguin_py import penguin
 
 @penguin
 def foo(test1, test2=None):
-    # NOTE: this function can be anything!
+    # Note: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
@@ -81,7 +81,7 @@ def foo(test1, test2=None):
 test = test_func("", test2=":")
 ```
 
-You'll get a `TypeError` relating to arguments.
+If you do this, you'll get a `TypeError` relating to arguments.
 
 ## Asynchronous Functions
 
@@ -95,7 +95,7 @@ from penguin_py import penguin
 
 @penguin_async()
 def foo(test1, test2=None):
-    # NOTE: this function can be anything!
+    # Note: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
