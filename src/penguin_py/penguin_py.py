@@ -30,7 +30,6 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- Update README.md and README_PYPI.md
 - reddit post
 
 """
