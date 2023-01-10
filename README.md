@@ -1,17 +1,23 @@
-# 🐧 Penguin_py 🐧
-
-Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous and asynchronous functions.
-
-<p align="center">
+<h1 align="center">
 <img
     src="/img/penguin_py_logo.jpg"
     alt="Peter the penguin, penguin_py's mascot."
     title="Peter the penguin, penguin_py's mascot."
     width="200"
 />
+</h1>
+
+<p align="center">
+  <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://badge.fury.io/py/penguin_py.svg"></a>
+  <a href="http://unlicense.org/"><img src="https://img.shields.io/pypi/l/penguin_py.svg"></a>
+  <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://img.shields.io/pypi/pyversions/penguin_py.svg"></a>
 </p>
 
-Meet Peter, `penguin_py's` beloved mascot!
+
+# 🐧 Penguin_py 🐧
+
+Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous (`@penguin`) and asynchronous (`@penguin_async`) functions.
+
 
 <!--
 Link: https://www.freepik.com/free-vector/cute-happy-penguin-cartoon-icon-illustration-animal-nature-icon-concept-isolated-flat-cartoon-style_10717963.htm#query=penguin%20logo&position=1&from_view=keyword

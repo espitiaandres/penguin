@@ -30,8 +30,7 @@ logger = logging.getLogger("penguin")
 
 """
 TODO:
-- Boilerplate in each file
-- changelog.txt file
+- Update README.md and README_PYPI.md
 - reddit post
 
 """
