@@ -7,6 +7,8 @@
 />
 </h1>
 
+Peter the penguin logo credits go to `catalystuff` on [freepik.com](https://www.freepik.com/author/catalyststuff)
+
 <p align="center">
   <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://badge.fury.io/py/penguin_py.svg"></a>
   <a href="http://unlicense.org/"><img src="https://img.shields.io/pypi/l/penguin_py.svg"></a>
