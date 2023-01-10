@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: penguin-py
-Version: 0.3.6
+Version: 0.3.7
 Summary: Penguin: a customizable stopwatch decorator
 Home-page: https://github.com/espitiaandres/penguin
 Download-URL: https://github.com/espitiaandres/penguin
@@ -17,6 +17,13 @@ Classifier: Topic :: Utilities
 Requires-Python: >=3.7
 Description-Content-Type: text/markdown
 License-File: LICENSE
+
+<p align="center">
+  <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://badge.fury.io/py/penguin_py.svg"></a>
+  <a href="http://unlicense.org/"><img src="https://img.shields.io/pypi/l/penguin_py.svg"></a>
+  <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://img.shields.io/pypi/pyversions/penguin_py.svg"></a>
+</p>
+
 
 # 🐧 Penguin_py 🐧
 
@@ -38,7 +45,7 @@ To install `penguin_py` with the command line, run this command:
 
 To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.3.6`
+`penguin-py==0.3.7`
 
 # Usage
 
@@ -54,7 +61,7 @@ from penguin_py import penguin
 
 @penguin()
 def foo(test1, test2=None):
-    # NOTE: this function can be anything!
+    # Note: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
@@ -92,7 +99,7 @@ from penguin_py import penguin
 
 @penguin
 def foo(test1, test2=None):
-    # NOTE: this function can be anything!
+    # Note: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
@@ -101,7 +108,7 @@ def foo(test1, test2=None):
 test = test_func("", test2=":")
 ```
 
-You'll get a `TypeError` relating to arguments.
+If you do this, you'll get a `TypeError` relating to arguments.
 
 ## Asynchronous Functions
 
@@ -115,7 +122,7 @@ from penguin_py import penguin
 
 @penguin_async()
 def foo(test1, test2=None):
-    # NOTE: this function can be anything!
+    # Note: this function can be anything!
     for i in range(10000000):
         pass
     return "test", True
