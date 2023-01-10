@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://badge.fury.io/py/penguin_py.svg"></a>
+  <a href="http://unlicense.org/"><img src="https://img.shields.io/pypi/l/penguin_py.svg"></a>
+  <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://img.shields.io/pypi/pyversions/penguin_py.svg"></a>
+</p>
+
+
 # 🐧 Penguin_py 🐧
 
 Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous and asynchronous functions.
