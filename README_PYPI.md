@@ -4,8 +4,7 @@
   <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://img.shields.io/pypi/pyversions/penguin_py.svg"></a>
 </p>
 
-
-# 🐧 Penguin_py 🐧
+# 🐧 penguin-py 🐧
 
 Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous and asynchronous functions.
 
@@ -17,13 +16,13 @@ The source code of this package lives here: https://github.com/espitiaandres/pen
 
 ## With Command Line
 
-To install `penguin_py` with the command line, run this command:
+To install `penguin-py` with the command line, run this command:
 
-`pip install penguin_py`.
+`pip install penguin-py`.
 
 ## With a `requirements.txt` file
 
-To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
+To install `penguin-py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
 `penguin-py==0.3.7`
 
@@ -155,12 +154,12 @@ This will output the following to your logger:
 
 # Documentation
 
-Documentation of `penguin_py` can be found here: https://github.com/espitiaandres/penguin/blob/master/README.md
+Documentation of `penguin-py` can be found here: https://github.com/espitiaandres/penguin/blob/master/README.md
 
 # Bugs/Requests
 
-If you find any bugs or have any suggestions to `penguin_py`, submit them in the issues tab in the Github repo. This can be found here: https://github.com/espitiaandres/penguin/issues
+If you find any bugs or have any suggestions to `penguin-py`, submit them in the issues tab in the Github repo. This can be found here: https://github.com/espitiaandres/penguin/issues
 
 # License
 
-Distributed under the terms of the MIT license, `penguin_py` is free and open source software.
+Distributed under the terms of the MIT license, `penguin-py` is free and open source software.

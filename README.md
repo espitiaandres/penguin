@@ -1,13 +1,13 @@
 <h1 align="center">
 <img
     src="/img/penguin_py_logo.jpg"
-    alt="Peter the penguin, penguin_py's mascot."
-    title="Peter the penguin, penguin_py's mascot."
+    alt="Peter the penguin, penguin-py's mascot."
+    title="Peter the penguin, penguin-py's mascot."
     width="200"
 />
 </h1>
 
-Peter the penguin logo credits go to `catalystuff` on [freepik.com](https://www.freepik.com/author/catalyststuff)
+Peter the penguin logo credits go to `catalyststuff` on [freepik.com](https://www.freepik.com/author/catalyststuff)
 
 <p align="center">
   <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://badge.fury.io/py/penguin_py.svg"></a>
@@ -15,11 +15,9 @@ Peter the penguin logo credits go to `catalystuff` on [freepik.com](https://www.
   <a href="https://pypi.python.org/pypi/penguin_py"><img src="https://img.shields.io/pypi/pyversions/penguin_py.svg"></a>
 </p>
 
-
-# 🐧 Penguin_py 🐧
+# 🐧 penguin-py 🐧
 
 Penguin is a lightweight, customizable stopwatch ⏱ decorator that helps you determine how long it takes for your functions to run. It supports both synchronous (`@penguin`) and asynchronous (`@penguin_async`) functions.
-
 
 <!--
 Link: https://www.freepik.com/free-vector/cute-happy-penguin-cartoon-icon-illustration-animal-nature-icon-concept-isolated-flat-cartoon-style_10717963.htm#query=penguin%20logo&position=1&from_view=keyword
@@ -57,15 +55,15 @@ The source code of this package lives here: https://github.com/espitiaandres/pen
 
 ## With Command Line
 
-To install `penguin_py` with the command line, run this command:
+To install `penguin-py` with the command line, run this command:
 
-`pip install penguin_py`.
+`pip install penguin-py`.
 
 <a name="installation_req_txt"/>
 
 ## With a `requirements.txt` file
 
-To install `penguin_py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
+To install `penguin-py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
 `penguin-py==0.3.7`
 
@@ -213,16 +211,16 @@ This will output the following to your logger:
 
 # Documentation
 
-Documentation of `penguin_py` can be found here: https://github.com/espitiaandres/penguin/blob/master/README.md
+Documentation of `penguin-py` can be found here: https://github.com/espitiaandres/penguin/blob/master/README.md
 
 <a name="bugs_requests"/>
 
 # Bugs/Requests
 
-If you find any bugs or have any suggestions to `penguin_py`, submit them in the issues tab in the Github repo. This can be found here: https://github.com/espitiaandres/penguin/issues
+If you find any bugs or have any suggestions to `penguin-py`, submit them in the issues tab in the Github repo. This can be found here: https://github.com/espitiaandres/penguin/issues
 
 <a name="license"/>
 
 # License
 
-Distributed under the terms of the MIT license, `penguin_py` is free and open source software.
+Distributed under the terms of the MIT license, `penguin-py` is free and open source software.
