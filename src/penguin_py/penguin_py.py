@@ -46,6 +46,8 @@ python3 setup.py sdist bdist_wheel
 
 - Re-upload the new files:
 twine upload dist/*
+
+- Push to Github repo
 """
 
 just_fix_windows_console()
@@ -123,7 +125,7 @@ def penguin(
                 )
                 return value
             except Exception:
-                raise Exception(traceback.format_exc())
+                logger.error(traceback.format_exc())
 
         return penguin_wrapped
 
