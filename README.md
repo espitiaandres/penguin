@@ -65,7 +65,7 @@ To install `penguin-py` with the command line, run this command:
 
 To install `penguin-py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.3.8`
+`penguin-py==0.3.10`
 
 <a name="Usage"/>
 

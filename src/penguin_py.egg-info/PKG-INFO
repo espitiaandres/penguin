@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: penguin-py
-Version: 0.3.8
+Version: 0.3.10
 Summary: Penguin: a customizable stopwatch decorator
 Home-page: https://github.com/espitiaandres/penguin
 Download-URL: https://github.com/espitiaandres/penguin
@@ -44,7 +44,7 @@ To install `penguin-py` with the command line, run this command:
 
 To install `penguin-py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.3.8`
+`penguin-py==0.3.10`
 
 # Usage
 
