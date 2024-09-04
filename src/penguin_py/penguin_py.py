@@ -125,7 +125,7 @@ def penguin(
                 )
                 return value
             except Exception:
-                logger.error(traceback.format_exc())
+                raise
 
         return penguin_wrapped
 
@@ -204,7 +204,7 @@ def penguin_async(
                 )
                 return value
             except Exception:
-                logger.error(traceback.format_exc())
+                raise
 
         return penguin_wrapped
 
