@@ -49,6 +49,7 @@ class DataProcessing:
                 "white",
             ]
         ] = "black",
+        log_level: int = logging.DEBUG,
     ):
         self.func = func
         self.args = args
@@ -57,6 +58,7 @@ class DataProcessing:
         self.show_args = show_args if show_args is not None else False
         self.foreground = foreground if foreground is not None else "grey"
         self.background = background if background is not None else "black"
+        self.log_level = log_level
         return
 
     def pre(self):
@@ -75,6 +77,7 @@ class DataProcessing:
                 self.func_name,
                 self.foreground_colour,
                 self.background_colour,
+                self.log_level,
             )
 
         return
@@ -93,11 +96,12 @@ class DataProcessing:
         grey_foreground_colour, black_background_colour = get_default_colours()
         format_start = f"{self.foreground_colour}{self.background_colour}"
         format_end = f"{grey_foreground_colour}{black_background_colour}"
-        logger.info(
+        logger.log(
+            self.log_level,
             f"Finished {format_start}{self.func_name}{format_end} in {format_start}{time_msg}{format_end}"
         )
 
         if show_return or verbose:
-            logger.info(f"Returned value: {format_start}{value!r}{format_end}")
+            logger.log(self.log_level, f"Returned value: {format_start}{value!r}{format_end}")
 
         return

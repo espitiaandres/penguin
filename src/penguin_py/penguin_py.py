@@ -73,6 +73,7 @@ def penguin(
             "white",
         ]
     ] = "black",
+    log_level: int = logging.DEBUG,
 ):
     """
     ## A customizable stopwatch decorator for synchronous functions
@@ -91,6 +92,8 @@ def penguin(
         - default: `"grey"`
     `background`: When chosen from this list, `["red" "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
         - default: `"black"`
+    `log_level`: The logging level to use for all log messages from this decorator (e.g., `logging.DEBUG`, `logging.INFO`, `logging.WARNING`).
+        - default: `logging.DEBUG`
     """
 
     def penguin_decorator(func: Callable):
@@ -106,6 +109,7 @@ def penguin(
                 show_args=show_args,
                 foreground=foreground,
                 background=background,
+                log_level=log_level,
             )
             data_processing.pre()
 
@@ -152,6 +156,7 @@ def penguin_async(
             "white",
         ]
     ] = "black",
+    log_level: int = logging.DEBUG,
 ):
     """
     ## A customizable stopwatch decorator for coroutines (asynchronous functions)
@@ -170,6 +175,8 @@ def penguin_async(
         - default: `"grey"`
     `background`: When chosen from this list, `["red", "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
         - default: `"black"`
+    `log_level`: The logging level to use for all log messages from this decorator (e.g., `logging.DEBUG`, `logging.INFO`, `logging.WARNING`).
+        - default: `logging.DEBUG`
     """
 
     def penguin_decorator(func: Callable):
@@ -185,6 +192,7 @@ def penguin_async(
                 show_args=show_args,
                 foreground=foreground,
                 background=background,
+                log_level=log_level,
             )
             data_processing.pre()
 

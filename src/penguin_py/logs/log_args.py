@@ -24,6 +24,7 @@ def log_args(
     func_name: str,
     foreground_colour: str,
     background_colour: str,
+    log_level: int = logging.DEBUG,
 ):
     """
     Logs the args and kwargs that a function was called with.
@@ -36,5 +37,5 @@ def log_args(
     grey_foreground_colour, black_background_colour = get_default_colours()
     format_start = f"{foreground_colour}{background_colour}"
     format_end = f"{grey_foreground_colour}{black_background_colour}"
-    logger.info(f"Running {format_start}{function_signature}{format_end}")
+    logger.log(log_level, f"Running {format_start}{function_signature}{format_end}")
     return
