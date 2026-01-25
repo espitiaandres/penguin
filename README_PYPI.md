@@ -24,7 +24,7 @@ To install `penguin-py` with the command line, run this command:
 
 To install `penguin-py` using a `requirements.txt` file, add this line to your `requirements.txt` file.
 
-`penguin-py==0.3.13`
+`penguin-py==0.3.14`
 
 # Usage
 
@@ -151,6 +151,8 @@ This will output the following to your logger:
   - default: `"grey"`
 - `background`: When chosen from this list, `["red", "yellow", "green", "blue", "magenta", "cyan", "grey", "black", "white"]`, it colour the logger output **background** the chosen colour.
   - default: `"black"`
+- `log_level`: The logging level to use for all log messages from this decorator (e.g., `logging.DEBUG`, `logging.INFO`, `logging.WARNING`).
+  - default: `logging.DEBUG`
 
 # Documentation
 
